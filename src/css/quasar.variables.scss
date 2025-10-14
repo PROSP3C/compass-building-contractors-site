@@ -12,8 +12,8 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary: #1976d2;
-$secondary: #26a69a;
+$primary: #01427a;
+$secondary: #f4a124;
 $accent: #9c27b0;
 
 $dark: #1d1d1d;
@@ -27,9 +27,9 @@ $warning: #f2c037;
 // MIXINS
 
 $breakpoints: (
-  'sm': 425px,
-  'md': 768px,
-  'lg': 1024px,
+  'sm': 426px,
+  'md': 769px,
+  'lg': 1025px,
 );
 
 @mixin respond-to($breakpoint) {
