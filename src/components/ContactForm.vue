@@ -8,8 +8,8 @@
 </script>
 
 <template>
-  <q-form class="q-gutter-md">
-    <h2>Contact Us</h2>
+  <q-form class="ContactForm q-gutter-md">
+    <h2>CONTACT US</h2>
 
     <q-input
       filled
@@ -59,3 +59,20 @@
     </div>
   </q-form>
 </template>
+
+<style lang="scss" scoped>
+  .ContactForm {
+    color: $primary;
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 3rem;
+
+      @include respond-to('md') {
+        font-size: 4rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+</style>
