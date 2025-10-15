@@ -11,12 +11,23 @@
   <q-form
     class="ContactForm q-gutter-md"
     netlify
+    name="contact-form"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
   >
     <h2>CONTACT US</h2>
+
+    <input
+      type="hidden"
+      name="form-name"
+      value="contact-form"
+    />
 
     <q-input
       filled
       v-model="name"
+      name="name"
       label="Your full name *"
       lazy-rules
       :rules="[(val) => (val && val.length > 0) || 'Please type your name']"
@@ -26,6 +37,7 @@
       filled
       type="tel"
       v-model="phone"
+      name="phone"
       label="Your contact number *"
       lazy-rules
       :rules="[
@@ -41,6 +53,7 @@
       filled
       type="textarea"
       v-model="message"
+      name="message"
       label="Your message *"
       lazy-rules
       :rules="[(val) => (val && val.length > 0) || 'Please type your message']"
