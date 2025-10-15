@@ -1,10 +1,34 @@
 <script lang="ts" setup>
+  import { api } from 'src/boot/axios'
   import { ref } from 'vue'
 
   const name = ref('')
   const phone = ref('')
   const message = ref('')
   const accept = ref(false)
+
+  const handleSubmit = async () => {
+    const data = {
+      name: name.value,
+      phone: phone.value,
+      message: message.value,
+      accept: accept.value,
+      'form-name': 'contact-form',
+    }
+
+    await api.post(
+      '/',
+      Object.keys(data)
+        .map(
+          (key) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(data[key as keyof typeof data])}`,
+        )
+        .join('&'),
+      {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      },
+    )
+  }
 </script>
 
 <template>
@@ -15,6 +39,7 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    @submit.prevent="handleSubmit"
   >
     <h2>CONTACT US</h2>
 
@@ -61,7 +86,7 @@
 
     <q-toggle
       v-model="accept"
-      label="I accept the license and terms"
+      label="I accept the license and terms *"
     />
 
     <div>
@@ -70,6 +95,7 @@
         label="Send"
         type="submit"
         color="primary"
+        :disable="!accept"
       />
     </div>
   </q-form>
