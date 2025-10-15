@@ -117,6 +117,13 @@
         <q-item
           clickable
           tag="a"
+          href="/"
+        >
+          <q-item-section>HOME</q-item-section>
+        </q-item>
+        <q-item
+          clickable
+          tag="a"
           href="/about"
         >
           <q-item-section>ABOUT</q-item-section>
