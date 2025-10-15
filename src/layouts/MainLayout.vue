@@ -25,7 +25,7 @@
               tag="a"
               href="/"
               class="flex items-center"
-              style="padding: 0.5rem 0"
+              style="padding: 0.5rem 0; width: 300px !important"
             >
               <q-avatar>
                 <img src="compass-logo.png" />
