@@ -3,12 +3,14 @@
     sectionTitle: string
     paragraphs: string[]
     dark?: boolean
+    imageSrc?: string
   }
 
   withDefaults(defineProps<ContentSectionProps>(), {
     sectionTitle: '',
     paragraphs: () => [''],
     dark: true,
+    imageSrc: '',
   })
 </script>
 
@@ -17,6 +19,16 @@
     class="ContentSection"
     :class="dark ? 'dark' : 'light'"
   >
+    <q-img
+      v-if="imageSrc"
+      height="50px"
+      width="50px"
+      :no-transition="true"
+      :no-spinner="true"
+      :ratio="1"
+      :src="imageSrc"
+    />
+
     <h2>{{ sectionTitle }}</h2>
 
     <hr />
@@ -66,6 +78,10 @@
     &.light {
       background: #fff;
       color: $primary;
+
+      hr {
+        border-color: $secondary;
+      }
     }
   }
 </style>
