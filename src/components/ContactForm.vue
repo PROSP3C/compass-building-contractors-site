@@ -8,7 +8,10 @@
 </script>
 
 <template>
-  <q-form class="ContactForm q-gutter-md">
+  <q-form
+    class="ContactForm q-gutter-md"
+    netlify
+  >
     <h2>CONTACT US</h2>
 
     <q-input
