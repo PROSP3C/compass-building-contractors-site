@@ -76,6 +76,7 @@
       @include respond-to('md') {
         font-size: 4rem;
         margin-top: 5rem;
+        margin-bottom: 2rem;
       }
     }
   }
