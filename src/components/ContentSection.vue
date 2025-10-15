@@ -23,6 +23,7 @@
       v-if="imageSrc"
       height="50px"
       width="50px"
+      style="margin-bottom: 1rem"
       :no-transition="true"
       :no-spinner="true"
       :ratio="1"
