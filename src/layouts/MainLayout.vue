@@ -250,7 +250,7 @@
           <p>
             Website by
             <a
-              href="www.linkedin.com/in/declan-possnett-59682bb8"
+              href="https://www.linkedin.com/in/declan-possnett-59682bb8"
               target="_blank"
             >
               Declan Possnett
