@@ -6,6 +6,7 @@
   const phone = ref('')
   const message = ref('')
   const accept = ref(false)
+  const hasSubmitted = ref(false)
 
   const handleSubmit = async () => {
     const data = {
@@ -16,18 +17,22 @@
       'form-name': 'contact-form',
     }
 
-    await api.post(
-      '/',
-      Object.keys(data)
-        .map(
-          (key) =>
-            `${encodeURIComponent(key)}=${encodeURIComponent(data[key as keyof typeof data])}`,
-        )
-        .join('&'),
-      {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      },
-    )
+    await api
+      .post(
+        '/',
+        Object.keys(data)
+          .map(
+            (key) =>
+              `${encodeURIComponent(key)}=${encodeURIComponent(data[key as keyof typeof data])}`,
+          )
+          .join('&'),
+        {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        },
+      )
+      .finally(() => {
+        hasSubmitted.value = true
+      })
   }
 </script>
 
@@ -55,6 +60,7 @@
       name="name"
       label="Your full name *"
       lazy-rules
+      :disable="hasSubmitted"
       :rules="[(val) => (val && val.length > 0) || 'Please type your name']"
     />
 
@@ -65,6 +71,7 @@
       name="phone"
       label="Your contact number *"
       lazy-rules
+      :disable="hasSubmitted"
       :rules="[
         (val) => !!val || 'Please type your contact number',
         (val) =>
@@ -81,11 +88,13 @@
       name="message"
       label="Your message *"
       lazy-rules
+      :disable="hasSubmitted"
       :rules="[(val) => (val && val.length > 0) || 'Please type your message']"
     />
 
     <q-toggle
       v-model="accept"
+      :disable="hasSubmitted"
       label="I accept the license and terms *"
     />
 
@@ -95,8 +104,13 @@
         label="Send"
         type="submit"
         color="primary"
-        :disable="!accept"
+        :disable="!accept || hasSubmitted"
       />
+
+      <p v-if="hasSubmitted">
+        Thank you for getting in touch, we'll get back to you as soon as
+        possible.
+      </p>
     </div>
   </q-form>
 </template>
@@ -120,6 +134,12 @@
         margin-top: 5rem;
         margin-bottom: 2rem;
       }
+    }
+
+    p {
+      color: $positive;
+      font-size: 1.5rem;
+      margin-top: 2rem;
     }
   }
 </style>
