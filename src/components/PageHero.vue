@@ -11,11 +11,11 @@
     height: 200px;
     border-bottom: 5px solid $secondary;
 
-    @include respond-to(sm) {
+    @include respond-to('sm') {
       height: 300px;
     }
 
-    @include respond-to(md) {
+    @include respond-to('md') {
       height: 400px;
     }
   }

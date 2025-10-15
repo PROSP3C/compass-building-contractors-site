@@ -63,6 +63,11 @@
 <style lang="scss" scoped>
   .ContactForm {
     color: $primary;
+    margin-bottom: 3rem;
+
+    @include respond-to('md') {
+      margin-bottom: 5rem;
+    }
 
     h2 {
       font-size: 3rem;
