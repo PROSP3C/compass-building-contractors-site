@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
   .HeroSection {
-    background-image: url('/assets/hero.png');
+    background-image: url('/hero.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
