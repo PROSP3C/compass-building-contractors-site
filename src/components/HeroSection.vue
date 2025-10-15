@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
+    border-bottom: 5px solid $secondary;
 
     @include respond-to('sm') {
       padding: 0 3rem;

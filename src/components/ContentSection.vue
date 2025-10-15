@@ -19,17 +19,45 @@
   >
     <h2>{{ sectionTitle }}</h2>
 
+    <hr />
+
     <p
       v-for="(paragraph, i) in paragraphs"
       :key="i"
     >
       {{ paragraph }}
     </p>
+
+    <hr />
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .ContentSectioon {
+  .ContentSection {
+    color: $primary;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 3rem;
+
+      @include respond-to('md') {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      max-width: $max-width;
+      margin: auto;
+      margin-top: 1rem;
+    }
+
+    @include respond-to('md') {
+      padding: 5rem 2rem;
+    }
+
     &.dark {
       background: $primary;
       color: #fff;

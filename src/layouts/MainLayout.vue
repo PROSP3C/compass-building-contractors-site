@@ -11,7 +11,7 @@
 <template>
   <q-layout
     class="MainLayout"
-    view="hHh lpR fff"
+    view="hhh lpR fff"
   >
     <q-header
       class="bg-white text-primary"
@@ -170,14 +170,14 @@
 
       > div {
         margin: auto;
-        max-width: 1080px;
+        max-width: $max-width;
       }
     }
 
     footer {
       > div {
         margin: auto;
-        max-width: 1080px;
+        max-width: $max-width;
       }
     }
 
