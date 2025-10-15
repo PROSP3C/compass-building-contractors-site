@@ -14,34 +14,33 @@
     <q-input
       filled
       v-model="name"
-      label="Your name *"
-      hint="Name and surname"
+      label="Your full name *"
       lazy-rules
-      :rules="[(val) => (val && val.length > 0) || 'Please type something']"
+      :rules="[(val) => (val && val.length > 0) || 'Please type your name']"
     />
 
     <q-input
       filled
-      type="number"
+      type="tel"
       v-model="phone"
-      label="Your age *"
+      label="Your contact number *"
       lazy-rules
       :rules="[
-        (val) => (val !== null && val !== '') || 'Please type your age',
-        (val) => (val > 0 && val < 100) || 'Please type a real age',
+        (val) => !!val || 'Please type your contact number',
+        (val) =>
+          /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/.test(val) ||
+          /^(\+44\s?1\d{1,3}|\(?01\d{1,3}\)?)\s?\d{3,4}\s?\d{3,4}$/.test(val) ||
+          'Enter a valid UK phone number',
       ]"
     />
 
     <q-input
       filled
+      type="textarea"
       v-model="message"
-      label="Message *"
+      label="Your message *"
       lazy-rules
-      :rules="[
-        (val) =>
-          (val !== null && val !== '') || 'Please type your phone number',
-        (val) => (val > 0 && val < 100) || 'Please type a valid phone number',
-      ]"
+      :rules="[(val) => (val && val.length > 0) || 'Please type your message']"
     />
 
     <q-toggle
@@ -52,7 +51,7 @@
     <div>
       <q-btn
         class="flex full-width"
-        label="Submit"
+        label="Send"
         type="submit"
         color="primary"
       />
