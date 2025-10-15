@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import HeroSection from 'src/components/HeroSection.vue'
+</script>
 
 <template>
-  <q-page class="row items-center justify-evenly">
-    <div>Home Page</div>
+  <q-page>
+    <HeroSection />
   </q-page>
 </template>
