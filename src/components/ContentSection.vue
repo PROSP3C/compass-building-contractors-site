@@ -62,7 +62,7 @@
     }
 
     p {
-      max-width: $max-width;
+      max-width: $max-copy-width;
       margin: auto;
       margin-top: 1rem;
     }
