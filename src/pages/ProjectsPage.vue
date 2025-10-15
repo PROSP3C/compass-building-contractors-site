@@ -1,9 +1,11 @@
 <script lang="ts" setup>
   import ContentSection from 'src/components/ContentSection.vue'
+  import PageHero from 'src/components/PageHero.vue'
 </script>
 
 <template>
   <div>
+    <PageHero />
     <ContentSection
       section-title="PROJECTS"
       :paragraphs="[
