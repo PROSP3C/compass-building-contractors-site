@@ -156,15 +156,107 @@
       <router-view />
     </q-page-container>
 
-    <q-footer class="bg-grey-8 text-white">
-      <div>
-        <q-toolbar>
-          <q-toolbar-title>
-            <q-avatar>
-              <img src="/compass-logo-white.png" />
-            </q-avatar>
-          </q-toolbar-title>
-        </q-toolbar>
+    <q-footer class="MainLayout-footer">
+      <div class="MainLayout-footerContent">
+        <div>
+          <q-avatar>
+            <img src="/compass-logo-white.png" />
+          </q-avatar>
+          <hr />
+          <q-list style="min-width: 100px">
+            <q-item
+              clickable
+              tag="a"
+              href="/"
+            >
+              <q-item-section>HOME</q-item-section>
+            </q-item>
+            <q-item
+              clickable
+              tag="a"
+              href="/about"
+            >
+              <q-item-section>ABOUT</q-item-section>
+            </q-item>
+            <q-item
+              clickable
+              tag="a"
+              href="/services"
+            >
+              <q-item-section>SERVICES</q-item-section>
+            </q-item>
+            <q-item
+              clickable
+              tag="a"
+              href="/projects"
+            >
+              <q-item-section>PROJECTS</q-item-section>
+            </q-item>
+            <q-item
+              clickable
+              tag="a"
+              href="/contact"
+            >
+              <q-item-section>CONTACT</q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div>
+          <hr />
+          <div>
+            <a
+              href="tel:01775670045"
+              target="_blank"
+              style="margin-bottom: 2rem; margin-right: 1rem"
+            >
+              <q-icon name="phone" />
+              <span>01775 670045</span>
+            </a>
+            <a
+              href="tel:07368957257"
+              target="_blank"
+              style="margin-bottom: 2rem"
+            >
+              <q-icon name="phone" />
+              <span>07368957257</span>
+            </a>
+          </div>
+          <a
+            href="mailto:compass.buildingcontractors@gmail.com"
+            target="_blank"
+            style="margin-bottom: 2rem"
+          >
+            <q-icon name="email" />
+            <span>compass.buildingcontractors@gmail.com</span>
+          </a>
+          <hr />
+          <div>
+            <a
+              href="/privacy-policy"
+              style="margin-bottom: 1rem; margin-right: 1rem"
+            >
+              Privacy Policy</a
+            >
+            <a
+              href="/terms-of-use"
+              style="margin-bottom: 1rem"
+            >
+              Terms Of Use
+            </a>
+          </div>
+
+          <hr />
+          <p>© 2025 Compass Building Contractors Ltd. All rights reserved.</p>
+          <p>
+            Website by
+            <a
+              href="www.linkedin.com/in/declan-possnett-59682bb8"
+              target="_blank"
+            >
+              Declan Possnett
+            </a>
+          </p>
+        </div>
       </div>
     </q-footer>
   </q-layout>
@@ -182,9 +274,72 @@
     }
 
     footer {
-      > div {
-        margin: auto;
+      padding: 2rem 1rem;
+      border-top: 5px solid $secondary;
+
+      a {
+        color: #fff;
+
+        i {
+          margin-right: 0.25rem;
+        }
+      }
+
+      hr {
+        margin: 2rem auto 2rem auto;
+
+        @include respond-to('md') {
+          margin: 0 0 2rem 0;
+          display: none;
+        }
+      }
+
+      .q-avatar {
+        margin-bottom: 1rem;
+        height: 200px;
+      }
+
+      .q-item {
+        padding: 0;
+      }
+
+      .MainLayout-footerContent {
         max-width: $max-width;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        div:first-of-type {
+          @include respond-to('md') {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            height: 100%;
+            margin: auto 0;
+          }
+        }
+
+        > div:nth-of-type(2) {
+          @include respond-to('md') {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 100%;
+            margin: auto 0;
+
+            a {
+              display: inline;
+            }
+          }
+        }
+
+        @include respond-to('md') {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          text-align: left;
+        }
       }
     }
 
