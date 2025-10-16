@@ -9,9 +9,15 @@
 
     <ContentSection
       section-title="ABOUT US"
-      :paragraphs="[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec mauris lectus. Nulla rutrum tellus ipsum, nec dignissim sapien rhoncus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae venenatis lectus. Nam ac elementum risus. Phasellus quis metus purus. Suspendisse nec arcu id leo fringilla auctor. Donec tempor sodales massa, sit amet fringilla velit bibendum id.',
-        'Integer vulputate, ex et commodo placerat, leo massa maximus ipsum, ac consequat augue dolor vitae mauris. Fusce non placerat lectus. Vestibulum pellentesque vel est in maximus. Etiam sed lorem et nisi fringilla pretium id in felis. Phasellus eget tincidunt nisl, id pulvinar sapien. Quisque tincidunt urna nec mollis ultricies. Curabitur vel erat quis ex finibus tempor. Maecenas ac magna nisl. Curabitur fringilla quam vitae leo tempor, vel dapibus nibh suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ipsum erat, laoreet et gravida quis, lacinia nec odio. Sed eget varius magna. Duis eget ullamcorper lacus, a efficitur metus. Curabitur dapibus accumsan pharetra.',
+      :sections="[
+        {
+          title: 'Who Are We?',
+          paragraph: `We are a friendly and family run building contractor company specialising in transforming existing spaces with precision, care, and a commitment to quality. Whether you're upgrading your home, refreshing a commercial property, or tackling essential repairs, our experienced team delivers dependable results with full regulatory compliance and a personal touch.`,
+        },
+        {
+          title: 'Areas We Cover',
+          paragraph: `We proudly serve clients in Bourne, Peterborough, Spalding, and surrounding towns and villages across Lincolnshire and Cambridgeshire. If you're nearby and unsure whether we cover your area, just reach out — we're always happy to help.`,
+        },
       ]"
       :dark="false"
     />

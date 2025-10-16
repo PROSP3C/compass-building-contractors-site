@@ -1,14 +1,18 @@
 <script lang="ts" setup>
+  type Section = {
+    title: string
+    paragraph: string
+  }
   export interface ContentSectionProps {
     sectionTitle: string
-    paragraphs: string[]
+    sections: Section[]
     dark?: boolean
     imageSrc?: string
   }
 
   withDefaults(defineProps<ContentSectionProps>(), {
     sectionTitle: '',
-    paragraphs: () => [''],
+    paragraphs: () => [],
     dark: true,
     imageSrc: '',
   })
@@ -32,14 +36,18 @@
 
     <h2>{{ sectionTitle }}</h2>
 
-    <hr v-if="paragraphs.length" />
+    <hr v-if="sections.length" />
 
-    <p
-      v-for="(paragraph, i) in paragraphs"
+    <template
+      v-for="({ title, paragraph }, i) in sections"
       :key="i"
     >
-      {{ paragraph }}
-    </p>
+      <h3 v-if="title.length">{{ title }}</h3>
+
+      <p>
+        {{ paragraph }}
+      </p>
+    </template>
 
     <hr />
   </div>
@@ -55,16 +63,26 @@
 
     h2 {
       font-size: 3rem;
+      max-width: $max-copy-width;
+      text-align: center;
 
       @include respond-to('md') {
         font-size: 4rem;
       }
     }
 
+    h3 {
+      margin: 2rem auto 1rem auto;
+      max-width: $max-copy-width;
+      width: 100%;
+      font-size: 2rem;
+    }
+
     p {
       max-width: $max-copy-width;
       margin: auto;
       margin-top: 1rem;
+      font-size: 1rem;
     }
 
     @include respond-to('md') {

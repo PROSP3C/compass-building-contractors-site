@@ -8,20 +8,32 @@
     <HeroSection />
 
     <ContentSection
-      section-title="SECTION 1 TITLE"
-      :paragraphs="[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec mauris lectus. Nulla rutrum tellus ipsum, nec dignissim sapien rhoncus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae venenatis lectus. Nam ac elementum risus. Phasellus quis metus purus. Suspendisse nec arcu id leo fringilla auctor. Donec tempor sodales massa, sit amet fringilla velit bibendum id.',
-        'Integer vulputate, ex et commodo placerat, leo massa maximus ipsum, ac consequat augue dolor vitae mauris. Fusce non placerat lectus. Vestibulum pellentesque vel est in maximus. Etiam sed lorem et nisi fringilla pretium id in felis. Phasellus eget tincidunt nisl, id pulvinar sapien. Quisque tincidunt urna nec mollis ultricies. Curabitur vel erat quis ex finibus tempor. Maecenas ac magna nisl. Curabitur fringilla quam vitae leo tempor, vel dapibus nibh suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ipsum erat, laoreet et gravida quis, lacinia nec odio. Sed eget varius magna. Duis eget ullamcorper lacus, a efficitur metus. Curabitur dapibus accumsan pharetra.',
+      section-title="Welcome to Compass Building Contractors Ltd"
+      :sections="[
+        {
+          title: '',
+          paragraph: `At Compass Building Contractors Ltd, we believe great construction starts with trust, craftsmanship, and clear communication. With years of experience serving homeowners and businesses across Lincolnshire and Cambridgeshire, we’ve built a reputation for delivering high-quality work with a personal touch.`,
+        },
+        {
+          title: '',
+          paragraph: `Whether you're planning a home renovation, commercial upgrade, or essential property maintenance, our team brings precision, professionalism, and pride to every project. We don’t just build — we improve, restore, and enhance the spaces you rely on.`,
+        },
       ]"
       image-src="bricks.png"
       :dark="true"
     />
 
     <ContentSection
-      section-title="SECTION 2 TITLE"
-      :paragraphs="[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec mauris lectus. Nulla rutrum tellus ipsum, nec dignissim sapien rhoncus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae venenatis lectus. Nam ac elementum risus. Phasellus quis metus purus. Suspendisse nec arcu id leo fringilla auctor. Donec tempor sodales massa, sit amet fringilla velit bibendum id.',
-        'Integer vulputate, ex et commodo placerat, leo massa maximus ipsum, ac consequat augue dolor vitae mauris. Fusce non placerat lectus. Vestibulum pellentesque vel est in maximus. Etiam sed lorem et nisi fringilla pretium id in felis. Phasellus eget tincidunt nisl, id pulvinar sapien. Quisque tincidunt urna nec mollis ultricies. Curabitur vel erat quis ex finibus tempor. Maecenas ac magna nisl. Curabitur fringilla quam vitae leo tempor, vel dapibus nibh suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ipsum erat, laoreet et gravida quis, lacinia nec odio. Sed eget varius magna. Duis eget ullamcorper lacus, a efficitur metus. Curabitur dapibus accumsan pharetra.',
+      section-title="Local & Trusted"
+      :sections="[
+        {
+          title: '',
+          paragraph: `Based in the heart of Lincolnshire, we proudly serve clients in Bourne, Peterborough, Spalding, and surrounding towns and villages. Our team understands the local landscape, planning requirements, and expectations — giving you peace of mind from start to finish.`,
+        },
+        {
+          title: '',
+          paragraph: `Whether you're refreshing a family home or upgrading a business space, Compass Building Contractors Ltd is here to help. Get in touch today for a free consultation and discover how we can bring your project to life.`,
+        },
       ]"
       image-src="houses.png"
       :dark="false"

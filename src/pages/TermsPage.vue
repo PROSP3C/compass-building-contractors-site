@@ -1,15 +1,51 @@
 <script lang="ts" setup>
   import ContentSection from 'src/components/ContentSection.vue'
+
+  const sections = [
+    {
+      title: '',
+      paragraph: `Effective Date: 16/10/2025 Last Updated: 16/10/2025 Welcome to the website of Compass Building Contractors Ltd ("we", "our", or "us"). By accessing or using this website, you agree to comply with and be bound by the following terms and conditions. If you do not agree, please refrain from using our site.`,
+    },
+    {
+      title: 'Use of Our Website',
+      paragraph: `This website is intended for general information about our services. You may browse, download, or print content for personal use only. You must not use this site for unlawful purposes or in any way that may damage, disable, or impair its functionality.`,
+    },
+    {
+      title: 'Intellectual Property',
+      paragraph: `All content on this website—including text, images, logos, and layout—is the property of Compass Building Contractors Ltd or licensed to us. You may not reproduce, distribute, or modify any content without our prior written consent.`,
+    },
+    {
+      title: 'Contact & Enquiries',
+      paragraph: `Any information submitted via contact forms or email is treated in accordance with our Privacy Policy. We aim to respond promptly, but we do not guarantee response times or service availability through the website.`,
+    },
+    {
+      title: 'External Links',
+      paragraph: `Our website may contain links to third-party websites. These are provided for convenience only. We do not endorse or accept responsibility for the content, privacy practices, or accuracy of external sites.`,
+    },
+    {
+      title: 'Disclaimer',
+      paragraph: `While we strive to keep our website accurate and up to date, we make no warranties or representations about the completeness or reliability of any content. All information is provided “as is” without any guarantees.`,
+    },
+    {
+      title: 'Limitation of Liability',
+      paragraph: `Compass Building Contractors Ltd shall not be liable for any direct, indirect, or consequential loss or damage arising from the use of this website or reliance on its content.`,
+    },
+    {
+      title: 'Changes to These Terms',
+      paragraph: `We reserve the right to update these Terms & Conditions at any time. Changes will be posted on this page, and continued use of the site implies acceptance of the updated terms.`,
+    },
+    {
+      title: 'Governing Law',
+      paragraph: `These Terms & Conditions are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.`,
+    },
+  ]
 </script>
 
 <template>
   <div>
     <ContentSection
       section-title="Terms Of Use"
-      :paragraphs="[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec mauris lectus. Nulla rutrum tellus ipsum, nec dignissim sapien rhoncus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae venenatis lectus. Nam ac elementum risus. Phasellus quis metus purus. Suspendisse nec arcu id leo fringilla auctor. Donec tempor sodales massa, sit amet fringilla velit bibendum id.',
-        'Integer vulputate, ex et commodo placerat, leo massa maximus ipsum, ac consequat augue dolor vitae mauris. Fusce non placerat lectus. Vestibulum pellentesque vel est in maximus. Etiam sed lorem et nisi fringilla pretium id in felis. Phasellus eget tincidunt nisl, id pulvinar sapien. Quisque tincidunt urna nec mollis ultricies. Curabitur vel erat quis ex finibus tempor. Maecenas ac magna nisl. Curabitur fringilla quam vitae leo tempor, vel dapibus nibh suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ipsum erat, laoreet et gravida quis, lacinia nec odio. Sed eget varius magna. Duis eget ullamcorper lacus, a efficitur metus. Curabitur dapibus accumsan pharetra.',
-      ]"
+      :sections="sections"
       :dark="false"
     />
   </div>

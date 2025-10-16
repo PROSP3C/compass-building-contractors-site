@@ -10,7 +10,7 @@
 
     <ContentSection
       section-title="CONTACT US"
-      :paragraphs="[]"
+      :sections="[]"
       :dark="false"
       style="margin-bottom: -5rem"
     />

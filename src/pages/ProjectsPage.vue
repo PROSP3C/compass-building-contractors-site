@@ -8,8 +8,11 @@
     <PageHero />
     <ContentSection
       section-title="PROJECTS"
-      :paragraphs="[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec mauris lectus. Nulla rutrum tellus ipsum, nec dignissim sapien rhoncus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae venenatis lectus. Nam ac elementum risus. Phasellus quis metus purus. Suspendisse nec arcu id leo fringilla auctor. Donec tempor sodales massa, sit amet fringilla velit bibendum id.',
+      :sections="[
+        {
+          title: '',
+          paragraph: `At Compass Building Contractors Ltd, we specialise in transforming existing spaces with precision, care, and a commitment to quality. Whether you're upgrading your home, refreshing a commercial property, or tackling essential repairs, our experienced team delivers dependable results with full regulatory compliance and a personal touch.`,
+        },
       ]"
       :dark="false"
     />
