@@ -28,7 +28,10 @@
               style="padding: 0.5rem 0; width: 300px !important"
             >
               <q-avatar>
-                <img src="compass-logo.png" />
+                <img
+                  src="compass-logo.png"
+                  alt="Compass Building Contractors Logo"
+                />
               </q-avatar>
 
               <div class="MainLayout-titleContainer">
@@ -160,7 +163,10 @@
       <div class="MainLayout-footerContent">
         <div>
           <q-avatar>
-            <img src="/compass-logo-white.png" />
+            <img
+              src="/compass-logo-white.png"
+              alt="Compass Building Contractors Logo"
+            />
           </q-avatar>
           <hr />
           <q-list style="min-width: 100px">

@@ -32,6 +32,8 @@
       :no-spinner="true"
       :ratio="1"
       :src="imageSrc"
+      alt=""
+      aria-hidden="true"
     />
 
     <h2>{{ sectionTitle }}</h2>
