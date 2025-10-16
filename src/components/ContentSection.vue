@@ -32,7 +32,7 @@
 
     <h2>{{ sectionTitle }}</h2>
 
-    <hr />
+    <hr v-if="paragraphs.length" />
 
     <p
       v-for="(paragraph, i) in paragraphs"

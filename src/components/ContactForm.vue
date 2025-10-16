@@ -46,8 +46,6 @@
     data-netlify-honeypot="bot-field"
     @submit.prevent="handleSubmit"
   >
-    <h2>CONTACT US</h2>
-
     <input
       type="hidden"
       name="form-name"
