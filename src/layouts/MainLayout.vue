@@ -87,10 +87,10 @@
             to="/services"
             label="SERVICES"
           />
-          <q-route-tab
+          <!-- <q-route-tab
             to="/projects"
             label="PROJECTS"
-          />
+          /> -->
           <q-route-tab
             to="/contact"
             label="CONTACT"
@@ -135,13 +135,13 @@
         >
           <q-item-section>SERVICES</q-item-section>
         </q-item>
-        <q-item
+        <!-- <q-item
           clickable
           tag="a"
           href="/projects"
         >
           <q-item-section>PROJECTS</q-item-section>
-        </q-item>
+        </q-item> -->
         <q-item
           clickable
           tag="a"
@@ -185,13 +185,13 @@
             >
               <q-item-section>SERVICES</q-item-section>
             </q-item>
-            <q-item
+            <!-- <q-item
               clickable
               tag="a"
               href="/projects"
             >
               <q-item-section>PROJECTS</q-item-section>
-            </q-item>
+            </q-item> -->
             <q-item
               clickable
               tag="a"
